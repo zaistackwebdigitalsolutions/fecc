@@ -14,7 +14,7 @@ html {
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Hind", sans-serif;
   color: #9fa1a4;
   line-height: 1.5;
 }
@@ -36,7 +36,7 @@ h4,
 h5,
 h6,
 .font-heading {
-  font-family: "Poppins", sans-serif;
+  font-family: "Montserrat", sans-serif;
   /* color: #000; */
 }
 
@@ -353,7 +353,7 @@ section {
 /* Contact Form */
 .form-control {
   height: 48px;
-  border-radius: 0;
+  /* border-radius: 0; */
   border: 1px solid #dae0e5;
 }
 
@@ -441,7 +441,7 @@ section {
 }
 
 .post-entry .post-text h3 {
-  font-size: 20px;
+  font-size: 18px;
   color: #000000;
 }
 
@@ -457,6 +457,12 @@ section {
 
 .post-entry .post-text .readmore {
   color: #2d71a1;
+}
+
+@media screen and (max-width: 768px) {
+  .post-entry .post-text h3 {
+    font-size: 16px;
+  }
 }
 
 .sidebar-box {
@@ -1052,6 +1058,7 @@ section {
   transition: 0.3s background ease;
   color: #0d1e2d;
   line-height: 0;
+  box-shadow: var(--bs-box-shadow) !important;
 }
 
 .social a span {
@@ -1132,4 +1139,38 @@ section {
 .nav-link:focus,
 .nav-link:hover {
   color: #3687c1;
+}
+.nav-profile {
+  width: 40px;
+  border-radius: 50%;
+  margin-right: 7px;
+}
+.upload {
+  opacity: 0;
+}
+.upload-label {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+}
+.image-area {
+  padding: 1rem;
+  position: relative;
+}
+.image-area::before {
+  content: "";
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.8rem;
+  z-index: 1;
+}
+.image-area img {
+  z-index: 2;
+  position: relative;
 }

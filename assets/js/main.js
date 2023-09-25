@@ -128,7 +128,6 @@
   });
 
   // lightswitch
-
   let lightSwitch = document.getElementById("lightSwitch");
   if (lightSwitch) {
     darkMode();
@@ -179,7 +178,6 @@
   }
 
   // datetimepicker
-
   var today = new Date();
   var minDate = today.setDate(today.getDate() + 1);
 
