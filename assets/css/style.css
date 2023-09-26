@@ -1174,3 +1174,8 @@ section {
   z-index: 2;
   position: relative;
 }
+.normal-btn {
+  padding: var(--bs-btn-padding-y) var(--bs-btn-padding-x) !important;
+  border: var(--bs-btn-border-width) solid var(--bs-btn-border-color);
+  border-radius: var(--bs-btn-border-radius);
+}

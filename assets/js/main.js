@@ -214,3 +214,69 @@
     return new bootstrap.Tooltip(tooltipTriggerEl);
   });
 })();
+
+// upload img
+function readURL(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+
+    reader.onload = function (e) {
+      $(".imageResult").attr("src", e.target.result);
+    };
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+
+$(function () {
+  $(".upload").on("change", function () {
+    readURL(input);
+  });
+});
+
+// create reg link
+$(".rowAdder").click(function () {
+  newRowAdd =
+    '  <div id="row">' +
+    '                              <div class="input-group mt-3">' +
+    '                                <select class="form-select">' +
+    '                                  <option value="1" selected>WhatsApp</option>' +
+    '                                  <option value="2">Telegram</option>' +
+    '                                  <option value="3">Facebook</option>' +
+    '                                  <option value="3">Instagram</option>' +
+    "                                </select>" +
+    '                                <input type="text" class="form-control m-input" placeholder="Registration\'s link" aria-label="Registration\'s link" aria-describedby="DeleteRow" />' +
+    '                                <button class="btn normal-btn btn-outline-danger" type="button" id="DeleteRow" >' +
+    '                                  <i class="bi bi-trash"></i> Delete' +
+    "                                </button>" +
+    "                              </div>" +
+    "                            </div>";
+
+  $("#newinput").append(newRowAdd);
+});
+$("body").on("click", "#DeleteRow", function () {
+  $(this).parents("#row").remove();
+});
+
+// edit reg link
+$(".rowAdder2").click(function () {
+  newRowAdd =
+    '  <div id="row">' +
+    '                              <div class="input-group mt-3">' +
+    '                                <select class="form-select">' +
+    '                                  <option value="1" selected>WhatsApp</option>' +
+    '                                  <option value="2">Telegram</option>' +
+    '                                  <option value="3">Facebook</option>' +
+    '                                  <option value="3">Instagram</option>' +
+    "                                </select>" +
+    '                                <input type="text" class="form-control m-input" placeholder="Registration\'s link" aria-label="Registration\'s link" aria-describedby="DeleteRow" />' +
+    '                                <button class="btn normal-btn btn-outline-danger" type="button" id="DeleteRow" >' +
+    '                                  <i class="bi bi-trash"></i> Delete' +
+    "                                </button>" +
+    "                              </div>" +
+    "                            </div>";
+
+  $("#newinput2").append(newRowAdd);
+});
+$("body").on("click", "#DeleteRow", function () {
+  $(this).parents("#row2").remove();
+});
